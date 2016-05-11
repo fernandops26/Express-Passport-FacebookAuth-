@@ -1,0 +1,13 @@
+extends layout.jade
+block cuerpo
+	form(action="/auth/local",method="post").signup
+		.signup__imagen
+			img(src="#")
+		.signup__sociales
+			a(href="/auth/facebook") SignUp with Facebook
+			a(href="/auth/twitter") SignUp with FTwitter
+		.signup__datos
+			input(type="email",placeholder="correo",name="email")
+			input(type="password",placeholder="contraseña",name="pass")
+		.signup_accion
+			input(type="submit",value="signup")
