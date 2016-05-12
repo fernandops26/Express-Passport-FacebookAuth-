@@ -3,8 +3,14 @@ logs
 *.log
 npm-debug.log*
 
-#config
+#config de la aplicacion
 config
+
+#configuracion de prepros
+prepros.cfg
+
+#configuracion de webstorm
+.idea
 
 # Runtime data
 pids
