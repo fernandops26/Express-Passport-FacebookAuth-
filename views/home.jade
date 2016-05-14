@@ -2,12 +2,22 @@ extends layout.jade
 block cuerpo
 	.ed-container.home.main-center
 		.ed-item.tablet-35.ed-item.home__cabecera
-			h1.home__titulo.main-end Bienvenido 
-		.ed-item.tablet-65.web-45.home__cuerpo
-			.home__foto
-				img.home__foto--fondo(src="#{user.online.photo}")
-				img.home__foto--avatar(src="#{user.online.photo}")
-			.home__nombre
-					h2 #{user.online.name}
-			.home__salir
-					a(href="/logout") Salir
+			h1.home__titulo.main-end Bienvenido
+		if(user.online.provider_id)
+			.ed-item.tablet-65.web-45.home__cuerpo
+				.home__foto
+					img.home__foto--fondo(src="#{user.online.photo}")
+					img.home__foto--avatar(src="#{user.online.photo}")
+				.home__nombre
+						h2 #{user.online.name}
+				.home__salir
+						a(href="/logout") Salir
+		else
+			.ed-item.tablet-65.web-45.home__cuerpo
+				.home__foto
+					img.home__foto--fondo(src="img/#{user.local.photo}")
+					img.home__foto--avatar(src="img/#{user.local.photo}")
+				.home__nombre
+						h2 #{user.local.name}
+				.home__salir
+						a(href="/logout") Salir

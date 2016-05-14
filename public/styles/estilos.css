@@ -3385,6 +3385,7 @@ class="no-padding" a la caja le da padding cero solo a ella
   text-transform: uppercase;
   cursor: pointer;
   font-size: 15px;
+  border: none;
 }
 
 .link__accion {
@@ -3395,13 +3396,32 @@ class="no-padding" a la caja le da padding cero solo a ella
   font-size: 15px;
   text-align: center;
   text-transform: uppercase;
+  border: none;
+}
+
+.color-naranja {
+  background-color: #E98B39;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.color-plomo {
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.mensajes_oculto {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .signup {
   width: 350px;
   padding: 1em;
   box-sizing: border-box;
-  border: solid 1px rgba(0, 0, 0, 0.7);
+  border: solid 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  margin-top: 1em;
 }
 
 .signup__imagen {
@@ -3441,7 +3461,49 @@ class="no-padding" a la caja le da padding cero solo a ella
 }
 
 .signup__sociales__item:hover {
-  background-color: rgba(25, 182, 152, 0.7);
+  background-color: rgba(93, 203, 182, 0.7);
+}
+
+.signup__mensajes {
+  margin-top: .5em;
+  position: relative;
+}
+
+.signup__mensajes--cerrar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  right: 1.1em;
+  top: .2em;
+  transition: all .5s;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.signup__mensajes--cerrar:hover {
+  text-decoration: underline;
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.signup__mensajes--contenedor {
+  padding: .8em .5em .5em;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: rgba(209, 66, 51, 0.7);
+  list-style-type: none;
+}
+
+.signup__mensajes--item {
+  padding: 0;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
 }
 
 .signup__datos {
@@ -3452,14 +3514,27 @@ class="no-padding" a la caja le da padding cero solo a ella
   padding: .5em;
   width: 100%;
   box-sizing: border-box;
-}
-
-.signup__input:last-child {
   margin-top: 1em;
 }
 
 .signup__accion {
-  margin-top: .5em;
+  margin-top: 1em;
+}
+
+.signup__link {
+  transition: all s;
+}
+
+.signup__link:hover {
+  text-decoration: underline;
+}
+
+.signup__submit {
+  transition: all .4s;
+}
+
+.signup__submit:hover {
+  background-color: #354B60;
 }
 
 .home__cabecera {
@@ -3552,4 +3627,128 @@ class="no-padding" a la caja le da padding cero solo a ella
   .home__salir {
     margin: auto;
   }
+}
+
+.login {
+  width: 350px;
+  padding: 1em;
+  box-sizing: border-box;
+  border: solid 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  margin-top: 1em;
+}
+
+.login__imagen {
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: #000;
+  margin: auto;
+}
+
+.login__avatar {
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: auto;
+}
+
+.login__sociales {
+  margin-top: .5em;
+}
+
+.login__sociales__item {
+  display: block;
+  width: 100%;
+  padding: .6em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+}
+
+.login__sociales__item:first-child {
+  background-color: #45619D;
+}
+
+.login__sociales__item:last-child {
+  margin-top: .3em;
+  background-color: #1888CC;
+}
+
+.login__sociales__item:hover {
+  background-color: rgba(93, 203, 182, 0.7);
+}
+
+.login__mensajes {
+  margin-top: .5em;
+  position: relative;
+}
+
+.login__mensajes--cerrar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  right: 1.1em;
+  top: .2em;
+  transition: all 1s;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.login__mensajes--cerrar:hover {
+  text-decoration: underline;
+  background-color: #E6E6E6;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.login__mensajes--contenedor {
+  padding: .8em .5em .5em;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: rgba(209, 66, 51, 0.7);
+  list-style-type: none;
+}
+
+.login__mensajes--item {
+  padding: 0;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+}
+
+.login__datos {
+  margin-top: .5em;
+}
+
+.login__input {
+  padding: .5em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1em;
+}
+
+.login__accion {
+  margin-top: 1em;
+}
+
+.login__link {
+  transition: all s;
+}
+
+.login__link:hover {
+  text-decoration: underline;
+}
+
+.login__submit {
+  transition: all .4s;
+}
+
+.login__submit:hover {
+  background-color: #354B60;
 }

@@ -1,3 +1,23 @@
 extends layout.jade
 block cuerpo
-	h1 Este es tu LOGIN PAPU!
+	form(action="/auth/login/local",method="post").login.ed-container
+		.ed-item
+			.login__imagen
+				img#login_avatar(src="img/none.svg").login__avatar.abcenter
+		.login__sociales.ed-item
+			a.login__sociales__item(href="/auth/facebook") Login with Facebook
+			a.login__sociales__item(href="/auth/twitter") Login with Twitter
+		if loginMsj.length >0
+			.login__mensajes.ed-item
+				.login__mensajes--cerrar#mensajes_cerrar x
+				ul.login__mensajes--contenedor
+					li.login__mensajes--item #{loginMsj}
+		.login__datos.ed-item
+			input.login__input#login_email(type="email",placeholder="Email",name="email")
+			input.login__input(type="password",placeholder="Password",name="pass")
+		.login__accion.ed-item
+			.ed-container
+				.ed-item.base-50.no-padding
+					input.boton__accion.color-naranja.login__submit(type="submit",value="Login")
+				.ed-item.base-50.no-padding
+					a.link__accion.color-plomo.login__link(href="/signup") Signup

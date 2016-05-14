@@ -6,9 +6,9 @@ var session=require('express-session');
 var cookieParser=require('cookie-parser');
 var passport=require('passport');
 var mongoose=require('mongoose');
-
-
-mongoose.connect('mongodb://localhost/bdlogin',function(err){
+var flash=require('connect-flash');
+//Conexion a mongoDB
+mongoose.connect('mongodb://127.0.0.1/bdlogin',function(err){
 	if(err) console.log(err);
 });
 
@@ -43,6 +43,7 @@ app.use(session({
 }));
 
 app.use(cookieParser());
+app.use(flash());
 
 
 //inicializar passport
@@ -50,11 +51,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-//importar las rutas
+//usar rutas
 app.use('/',index);
 app.use(auth);
 
+//Middleware para saber si esta autenticado
 app.use(midIsAuthenticated);
+//usar rutas que requiren autenticado
 app.use(users);
 
 

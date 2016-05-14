@@ -1,17 +1,23 @@
 extends layout.jade
 block cuerpo
-	form(action="/auth/local",method="post").signup.ed-container
+	form(action="/auth/signup/local",method="post").signup.ed-container
 		//- .signup__imagen.ed-item.center.ed-container
 		//- 	img(src="#").signup__imagen__item.abcenter
 		.signup__sociales.ed-item
 			a.signup__sociales__item(href="/auth/facebook") Signup with Facebook
 			a.signup__sociales__item(href="/auth/twitter") Signup with Twitter
+		if signupMsj.length >0
+			.signup__mensajes.ed-item
+				.signup__mensajes--cerrar#mensajes_cerrar x
+				ul.signup__mensajes--contenedor
+					li.signup__mensajes--item  #{signupMsj}
 		.signup__datos.ed-item
-			input.signup__input(type="email",placeholder="correo",name="email")
-			input.signup__input(type="password",placeholder="contraseña",name="pass")
+			input.signup__input(type="text",placeholder="Name",name="name")
+			input.signup__input(type="email",placeholder="Email",name="email")
+			input.signup__input(type="password",placeholder="Password",name="pass")
 		.signup__accion.ed-item
 			.ed-container
 				.ed-item.base-50.no-padding
-					a.link__accion(href="/login") Login
+					a.link__accion.color-plomo.signup__link(href="/login") Login
 				.ed-item.base-50.no-padding
-					input.boton__accion(type="submit",value="signup")
+					input.boton__accion.color-naranja.signup__submit(type="submit",value="signup")

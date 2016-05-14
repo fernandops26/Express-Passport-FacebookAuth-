@@ -1,4 +1,4 @@
-.signup{
+.login{
 	width:350px;
 	padding:1em; 
 	box-sizing:border-box;
@@ -13,12 +13,15 @@
 		height: 70px;
 		border:solid 1px rgba(#000,.3);
 		overflow: hidden;
+		background-color: #000;
+		margin:auto;
 
-		&__item{
+		
+	}
+	&__avatar{
 			max-width: 100%;
 			background-color: rgba(#000,.2);
 			height: auto;
-		}
 	}
 
 	&__sociales{

@@ -1,15 +1,16 @@
 var mongoose=require('mongoose');
+var bcrypt=require('bcrypt');
 
 
 var Schema=mongoose.Schema;
 
-
+//datos de usuario registrado por app y usuario registrado via(Facebook o Twitter)
 var userSchema=Schema({
 	local:{
-		id:String,
 		name:String,
 		photo:String,
-		imail:String,
+		email:String,
+		password:String,
 		createAt:{type:Date,default:Date.now}
 	},
 	online:{
@@ -21,6 +22,14 @@ var userSchema=Schema({
 		createAt:{type:Date,default:Date.now}//Fecha de creacion
 	}
 });
+
+userSchema.methods.generarHash=function(password){
+	return bcrypt.hashSync(password,bcrypt.genSaltSync(8),null);
+}
+
+userSchema.methods.verificarPassword=function(passwordEncrypt){
+	return bcrypt.compareSync(passwordEncrypt,this.local.password);
+}
 
 
 var User;

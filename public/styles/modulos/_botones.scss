@@ -8,6 +8,7 @@
 	text-transform:uppercase;
 	cursor:pointer;
 	font-size:15px;
+	border:none;
 }
 
 .link__accion{
@@ -18,4 +19,17 @@
 	font-size:15px;
 	text-align:center;
 	text-transform:uppercase;
+	border:none;
+}
+
+.color-naranja{
+	background-color:$color-naranja;
+	color:rgba(#fff,.8);
+}
+
+.color-plomo{
+	// background-color:$color-principal;
+	background-color: $color-plomo;
+	color:rgba(#000,.8);
+
 }
