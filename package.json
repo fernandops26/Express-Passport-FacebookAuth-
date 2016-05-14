@@ -1,5 +1,5 @@
 {
-  "name": "sad",
+  "name": "Ejemplo Express-Passport",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -31,13 +31,13 @@
     "gulp-sass": "^2.3.1",
     "jade": "^1.11.0",
     "mongoose": "^4.4.15",
-    "multer": "^1.1.0",
+    "multer": "^1.1.0",//no utiizado en este ejemplo
     "nodemon": "^1.9.1",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.0",
-    "passport-http": "^0.3.0",
+    "passport-http": "^0.3.0",//no utilizado en este ejemplo
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^4.0.0",
+    "passport-local-mongoose": "^4.0.0",//no utilizado en este ejemplo
     "passport-twitter": "^1.0.4"
   }
 }

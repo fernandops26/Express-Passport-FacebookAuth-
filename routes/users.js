@@ -2,6 +2,8 @@ var express=require('express');
 var passport=require('passport');
 var router=express.Router();
 
+//Rutas del usuario atenticado
+
 
 router.get('/home',function(req,res){
 	return res.render('home',{user:req.user});

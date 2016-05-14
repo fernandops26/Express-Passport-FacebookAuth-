@@ -48,6 +48,7 @@ app.use(flash());
 
 //inicializar passport
 app.use(passport.initialize());
+//Manejo de session con passport
 app.use(passport.session());
 
 

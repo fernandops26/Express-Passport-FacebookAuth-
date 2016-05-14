@@ -1,0 +1,28 @@
+<h1 id="express-passport-login-and-signup-">Express-Passport-Login-and-Signup-</h1>
+<h3 id="signup-and-login-with-passport-facebookmtwitter-local-and-express">Signup and login with passport(FacebookmTwitter,Local) and express</h3>
+<h3 id="registro-y-login-con-passport-local-facebook-twitter-y-express">Registro y login con Passport(Local,Facebook,Twitter) y express</h3>
+<ul>
+<li>Para esta pequeña aplicacion de autenticacion se utilizó:</li>
+<li>ED-GRID 1.2(Recomendado)</li>
+<li>Normalize</li>
+<li>Node.js en su version 5.9.1</li>
+<li>El Framework Express v.4.13.1</li>
+<li>Mongoose para la conexion con mongo db.</li>
+<li>Passport para la autenticación y manejo de sesiones.</li>
+<li>Jade como motor de vistas.</li>
+<li>El preprocesador de css Sass.</li>
+</ul>
+<p>Los datos que pide la aplicacion para crear un nuevo usuario mediante Facebook o Twitter son:</p>
+<ul>
+<li>proveedor(Facebook o Twitter).</li>
+<li>id_usuario(proporcionado por el proveedor)</li>
+<li>nombres</li>
+<li>foto de perfil</li>
+<li>email(solo en Facebook)</li>
+</ul>
+<h4 id="nota-importante-">Nota importante:</h4>
+<p>Para utlizar la autenticación online se debe &quot;crear una app&quot; en el área de <em>developers</em> en <strong>Facebook</strong> y <strong>Twitter</strong>, para obtener el <strong>id</strong> y la <strong>key</strong> de la app respectivamente, ademas del <strong>secret</strong> en ambos casos. Estos datos se utilizan para identificar a la aplicación(web,android,etc.) que quiere utilizar las respectivas api`s.</p>
+<p>Esta información deben ser colocarlos en la configuración ubicada en <em>config/config.js</em>, una vez realizado ese paso, podra utlizar la autenticación online.</p>
+<p>La razón de ser de las imágenes ubicadas en <em>public/img/</em> es que cuando un usuario se esta registrando localmente, la aplicación le asigna una imagen correspondiente al primer caraacter de su nommbre. En el caso de registrarse vía Twitter o Facebook se le asignará la imagen correspodiente a su perfil social.</p>
+<h4 id="consultas">Consultas</h4>
+<p>Tienes mi <a href="https://www.facebook.com/fernando.palacios.587606">Facebook</a>.</p>

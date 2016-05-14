@@ -4,7 +4,7 @@ var bcrypt=require('bcrypt');
 
 var Schema=mongoose.Schema;
 
-//datos de usuario registrado por app y usuario registrado via(Facebook o Twitter)
+//Esquema de datos del usuario registrado por app(local) y usuario registrado via online(Facebook o Twitter)
 var userSchema=Schema({
 	local:{
 		name:String,
@@ -23,16 +23,21 @@ var userSchema=Schema({
 	}
 });
 
+//Generacion de un hash
 userSchema.methods.generarHash=function(password){
 	return bcrypt.hashSync(password,bcrypt.genSaltSync(8),null);
 }
 
-userSchema.methods.verificarPassword=function(passwordEncrypt){
-	return bcrypt.compareSync(passwordEncrypt,this.local.password);
+
+//Comparacion de password 
+userSchema.methods.verificarPassword=function(password){
+	return bcrypt.compareSync(password,this.local.password);
 }
 
 
 var User;
+
+
 if(mongoose.models.User){
 	User=mongoose.model('User');
 }else{

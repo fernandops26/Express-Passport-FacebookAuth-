@@ -9,7 +9,7 @@ var utils=require('../utils/utils.js');
 //Importa modelo usuario
 var User=require('../models/User');
 
-//Importa configuracion(se debe crear un archivo config.js )
+//Importa configuracion
 var config=require('./config');
 
 
